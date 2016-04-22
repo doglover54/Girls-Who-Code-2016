@@ -1,84 +1,16 @@
 <!DOCTYPE HTML>
 <header>
 
-   <style>
-     ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-li a {
-    display: block;
-    width: 60px;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 60px;
-} 
 
-li a {
-    display: block;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-}
-
-li a {
-    display: block;
-    color: #000;
-    padding: 8px 0 8px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color on hover */
-li a:hover {
-    background-color: #555;
-    color: white;
-}
-.active {
-    background-color: #4CAF50;
-    color: white;
-}
-ul {
-    border: 1px solid #555;
-}
-
-li {
-    text-align: center;
-    border-bottom: 1px solid #555;
-}
-
-li:last-child {
-    border-bottom: none;
-}
-
-li {
-    display: inline;
-}
-li {
-    float: left;
-}
-
-a {
-    display: block;
-    padding: 8px;
-    background-color: #dddddd;
-}
-ul {
-    background-color: #dddddd;
-}
+<head>
+<style>
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
 }
 
 li {
@@ -87,33 +19,32 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: #666;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
+li a:hover:not(.active) {
+    background-color: #ddd;
 }
-.active {
+
+li a.active {
+    color: white;
     background-color: #4CAF50;
 }
-
-   </style>
-</header>
+</style>
+</head>
 <body>
 
-   <body bgcolor = "00BFFF"
-   <ul>
-  <li><a href="default.asp">Home</a></li>
-  <li><a href="news.asp">Stuff      
- </a></li>
-  <li><a href="contact.asp">My Favorite Books/Movies</a></li>
-  <li><a href="about.asp">About Me</a></li>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
 </ul>
 
+</body>
    <h2><br><br><br><br>Girls Who Code</h2>
   <h3>My name is Shreya Chilukuri. I am a 7th grader currently attending Joaquin Miller Middle School. My favorite subjects 
    at school are math and science. My favorite color is blue and I love all animals that are NOT insects. ;) I live 
