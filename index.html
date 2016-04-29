@@ -1,57 +1,100 @@
-<!DOCTYPE HTML>
-<header>
 
-
-<head>
+<!DOCTYPE html>
+<html>
 <style>
-ul {
+body {font-family: "Lato", sans-serif;}
+
+ul.tab {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    border: 1px solid #e7e7e7;
-    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
 }
 
-li {
-    float: left;
-}
+/* Float the list items side by side */
+ul.tab li {float: left;}
 
-li a {
-    display: block;
-    color: #666;
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
 }
 
-li a:hover:not(.active) {
+/* Change background color of links on hover */
+ul.tab li a:hover {
     background-color: #ddd;
 }
 
-li a.active {
-    color: white;
-    background-color: #4CAF50;
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: #ccc;
 }
-body {
-    background-color: #3BB9FF;
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 </style>
-</head>
 <body>
 
-<ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">My Favorite Books/Movies</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
-<h2>Girls Who Code</h2>
-  <h3>My name is Shreya Chilukuri. I am a 7th grader currently attending Joaquin Miller Middle School. My favorite subjects 
-   at school are math and science. My favorite color is blue and I love all animals that are NOT insects. ;) I live 
-   with my mom, my dad, and my 7-year old sister, in California. </h3>
- 
-  
-   <img src= "http://i.imgur.com/nZlaeSH.jpg" style="width:128px;height:128px;>
-</body>
+<h3>Fade in Tabs</h3>
 
+<ul class="tab">
+  <li><a href="#" class="tablinks" onclick="openCity(event, 'London')">London</a></li>
+  <li><a href="#" class="tablinks" onclick="openCity(event, 'Paris')">Paris</a></li>
+  <li><a href="#" class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</a></li>
+</ul>
+
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tabcontent.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+     
+</body>
+</html> 
