@@ -50,16 +50,7 @@
 
   <body>
 
-    <h3>
-      Dear Reader (s),</h3>
-    <h3>
-      Good Morning/Afternoon! My name is Shreya Chilukuri. Before
-      you view the rest of my webpage, I would like to thank you
-      for taking the time to read this. I really hope you like my webpage! 
-    </h3>
-    <h3>
-      SHREYA C.
-    </h3>
+    
     <ul class="tab">
       <li><a href="#" class="tablinks" onclick="openCity(event, 'Home')">Home</a></li>
       <li><a href="#" class="tablinks" onclick="openCity(event, 'My Favorite Books and Movies!!!')">My Favorite Books and Movies!!!</a></li>
@@ -72,7 +63,16 @@
 
 
     <div id="Home" class="tabcontent">
-      <img src="">
+      <h3>
+        Dear Reader (s),</h3>
+      <h3>
+        Good Morning/Afternoon! My name is Shreya Chilukuri. Before
+        you view the rest of my webpage, I would like to thank you
+        for taking the time to read this. I really hope you like my webpage! 
+      </h3>
+      <h3>
+        SHREYA C.
+      </h3>
     </div>
 
     <div id="My Favorite Books and Movies!!!" class="tabcontent">
@@ -127,7 +127,7 @@
         document.getElementById(cityName).style.display = "block";
         evt.currentTarget.className += " active";
       }
-      openCity(null, Home)
+      openCity(null, 'Home');
     </script>
 
   </body>
